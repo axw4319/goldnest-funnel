@@ -136,6 +136,34 @@
     }
     .kpi .num { font-size: 1.8rem; font-weight: 800; line-height: 1; }
 
+    .home-gallery {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .home-shot {
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 220px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,.08);
+      background: #dcdcdc;
+    }
+    .home-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+    .home-shot:hover img { transform: scale(1.04); }
+    .home-shot.wide { grid-column: span 7; }
+    .home-shot.tall { grid-column: span 5; }
+    .home-shot.third { grid-column: span 4; min-height: 180px; }
+    .home-shot.fourth { grid-column: span 4; min-height: 180px; }
+    .home-shot.fifth { grid-column: span 4; min-height: 180px; }
+
     .logos {
       display: grid;
       grid-template-columns: repeat(5, minmax(0,1fr));
@@ -252,6 +280,8 @@
       .logos { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .kpis, .testimonials { grid-template-columns: 1fr; }
       .hero { min-height: auto; padding: 84px 0 56px; }
+      .home-gallery { grid-template-columns: 1fr; }
+      .home-shot.wide, .home-shot.tall, .home-shot.third, .home-shot.fourth, .home-shot.fifth { grid-column: auto; min-height: 220px; }
     }
   </style>
 </head>
@@ -277,6 +307,30 @@
       </aside>
     </div>
   </header>
+
+  <section class="section">
+    <div class="wrap reveal">
+      <h2>DFW Homes In The Goldnest Portfolio</h2>
+      <p>Real property visuals pulled from Goldnest’s live website and homeowner pages.</p>
+      <div class="home-gallery">
+        <figure class="home-shot wide">
+          <img src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/23c3fb11-b12b-4124-9b63-d3667688eaa3/Goodson+2.jpg" alt="Goldnest home exterior in Texas" />
+        </figure>
+        <figure class="home-shot tall">
+          <img src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/8f68f2e5-aa61-46c8-ac45-e506100d9401/Boll+1.jpg" alt="Goldnest listed home interior" />
+        </figure>
+        <figure class="home-shot third">
+          <img src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/cd5d7c94-fe91-41df-9703-8bfb19b27d32/4204+Lavaca+Dr+EXTERIOR+Final-2.jpg" alt="4204 Lavaca property exterior" />
+        </figure>
+        <figure class="home-shot fourth">
+          <img src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/7b380b3c-7c59-418d-9e09-0ac03d9650f4/2010+Indian+Trail+Final-31+%282%29.jpg" alt="2010 Indian Trail property" />
+        </figure>
+        <figure class="home-shot fifth">
+          <img src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/ef3f43e0-6527-4662-80b5-9f3a2efba44e/2+-+Scenic+-+40299370.jpg" alt="Scenic Goldnest short-term rental home" />
+        </figure>
+      </div>
+    </div>
+  </section>
 
   <section class="section alt">
     <div class="wrap reveal">
