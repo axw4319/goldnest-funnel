@@ -71,6 +71,14 @@
       min-height: 76px;
       gap: 16px;
     }
+    .logo-wrap {
+      background: var(--brand-dark);
+      border-radius: 10px;
+      padding: 6px 10px;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+    }
     .logo { height: 52px; width: auto; display: block; }
 
     .hero {
@@ -258,7 +266,9 @@
 <body>
   <nav>
     <div class="wrap nav-inner">
-      <img class="logo" src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/080cede0-6309-4a9c-abbf-e3c119581288/footer-logo-1.jpg?format=500w" alt="Goldnest logo" />
+      <span class="logo-wrap">
+        <img class="logo" src="https://images.squarespace-cdn.com/content/v1/64afcf71d29df54f619b37c2/080cede0-6309-4a9c-abbf-e3c119581288/footer-logo-1.jpg?format=500w" alt="Goldnest logo" />
+      </span>
       <a class="btn" href="https://goldnest.co/property-management" target="_blank" rel="noopener">Book a Strategy Call</a>
     </div>
   </nav>
